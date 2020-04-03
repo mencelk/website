@@ -20,61 +20,58 @@ $transition: all 300ms;
   background-color: $color-one;
   padding: 12px 0;
   font-size: 16px;
-}
 
-.navigation ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  position: absolute;
-}
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+  
+    li {
+      display: inline-block;
+      margin: 0 36px 0 0;
+      position: relative;
+    
+      a {
+        text-decoration: none;
+        color: $color-text-one;
+    
+        &:hover {
+          color: $color-two;
+        }
+      }
+    }
 
-.navigation ul li {
-  display: inline-block;
-  margin: 0 36px 0 0;
-  position: relative;
+    li:hover ul {
+      display: block;
+    }
+  
+    ul {
+      display: none;
+      background-color: rgba(255, 0, 0, 0);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
 
-  a {
-    text-decoration: none;
-    color: $color-text-one;
+      li {
+        display: block;
+        margin: 8px 0;
+        padding: 0 24px;
+        background-color: rgba(255, 0, 0, 0);
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+      
+        a {
+          color: $color-text-one;
+      
+          &:hover {
+            color: $color-two;
+          }
+        }
+      }
+    }
   }
-}
-
-.navigation ul li a:hover {
-  color: $color-two;
-}
-
-.navigation ul ul li {
-  display: block;
-  margin: 0 0 12px 0;
-  padding: 0 24px;
-  background-color: $color-text-one;
-  color: $color-two;
-  text-align: left;
-  left: 50%;
-  transform: translateX(-50%);
-
-  a {
-    color: $color-two;
-  }
-
-  :hover {
-    background-color: $color-two;
-    color: $color-text-one;
-  }
-}
-
-.navigation li:hover ul {
-  display: block;
-}
-
-.navigation ul ul {
-  display: none;
-  background-color: $color-text-one;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: 12px;
 }
 
 /* Body */
@@ -154,22 +151,22 @@ section {
   background-color: inherit;
   background-position: 100% 0;
   background-size: 200%;
-  transition: $transition;;
-}
+  transition: $transition;
 
-.btn:hover {
-  background-position: 0 100%;
-  color: $color-text-one;
+  &:hover {
+    background-position: 0 100%;
+    color: $color-text-one;
+  }
 }
 
 .btn-one {            
   border-color: $color-text-one;
   color: $color-text-one;
   background-image: linear-gradient(90deg, $color-text-one 50%, transparent 50% );
-}
 
-.btn-one:hover {
-  color: $color-one;
+  &:hover {
+    color: $color-one;
+  }
 }
 
 .page-title {
@@ -201,7 +198,6 @@ section {
     margin: 0 0;
     height: auto;
     flex-grow: 2;
-    border: 1px solid;
   }
   
   &::before {
@@ -222,10 +218,10 @@ section {
   border-color: $color-two;
   color: $color-two;
   background-image: linear-gradient(90deg, $color-two 50%, transparent 50% );
-}
 
-.btn-two:hover {
-  color: $color-text-one;
+  &:hover {
+    color: $color-text-one;
+  }
 }
 
 .btn-three {   
@@ -233,10 +229,10 @@ section {
   border-color: $color-three;
   color: $color-three;
   background-image: linear-gradient(90deg, $color-three 50%, transparent 50% );
-}
 
-.btn-three:hover {
-  color: $color-text-one;
+  &:hover {
+    color: $color-text-one;
+  }
 }
 
 .btn-four {   
@@ -244,10 +240,10 @@ section {
   border-color: $color-one;
   color: $color-one;
   background-image: linear-gradient(90deg, $color-one 50%, transparent 50% );
-}
 
-.btn-four:hover {
-  color: $color-text-one;
+  &:hover {
+    color: $color-text-one;
+  }
 }
 
 .work {
@@ -317,10 +313,10 @@ section {
   text-align: left;
   color: $color-one;
   background-image: linear-gradient(90deg, $color-one 50%, transparent 50% );
-}
 
-.btn-five:hover {
-  color: $color-text-one;
+  &:hover {
+    color: $color-text-one;
+  }
 }
 
 /* Contact */
@@ -391,10 +387,10 @@ textarea {
   color: $color-text-one;
   background-image: linear-gradient(90deg, $color-text-one 50%, transparent 50% );
   padding: 15px 50px;
-}
 
-.btn-six:hover {
-  color: $color-one;
+  &:hover {
+    color: $color-one;
+  }
 }
 
 .page-footer {
